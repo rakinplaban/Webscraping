@@ -16,4 +16,15 @@ if __name__ == '__main__':
     app.run(debug=True,port=8000)
 ```
 
+### Get Api resources:
+```
+api = Api(app)
+
+class Hello(Resource):
+    def get(self):
+        return webScrapper()
+
+api.add_resource(Hello,'/')
+
+```
 
