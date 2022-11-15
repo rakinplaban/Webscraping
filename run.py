@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from flask_restful import Api, Resource
-from bs4 import BeautifulSoup
-import requests
+from scrapper import webScrapper
 
 # source = requests.get('https://webscraper.netlify.com/').text
 
@@ -14,10 +13,10 @@ api = Api(app)
 
 class Hello(Resource):
     def get(self):
-        return {'message' : "Hello World!"}
+        return webScrapper()
 
 api.add_resource(Hello,'/')
 
 if __name__ == '__main__':
-    app.run(debug=True,port=8000)
+    app.run(debug=True,port=5500)
 
