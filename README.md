@@ -6,3 +6,14 @@
 3. lxml
 4. flask
 
+### RESTful API
+```pip install restful``` <br>
+This code will install rest api in my application.
+
+*Note* --**To fix a number of port I will do this**
+```
+if __name__ == '__main__':
+    app.run(debug=True,port=8000)
+```
+
+
